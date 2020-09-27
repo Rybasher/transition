@@ -1,0 +1,121 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+}
+.content{
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+}
+.content__circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: burlywood;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation-name: circle-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes circle-animation{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 90%;
+    }
+}
+.content:hover .content__circle{
+animation-play-state: paused;
+}
+
+.anime__zone{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+}
+.anime__content{
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+}
+.anime__object{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: burlywood;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation-name: anime-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime-animation{
+    0%{
+        left: 0%;
+        top: 0px;
+    }
+    50%{
+        border-radius: 0%;
+        top:100px;
+    }
+    100%{
+        left: 90%;
+        top: 0px;
+    }
+}
+.anime__content:hover .anime__object{
+animation-play-state: paused;
+}
+.rotate__div{
+    margin-top: 100px;
+}
+.rotate__content{
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+}
+.rotate__object{
+    width: 100px;
+    height: 100px;
+
+    background: burlywood;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation-name: rotate-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotate-animation{
+    0%{
+        left: 0%;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 90%;
+        transform: rotate(360deg);
+
+    }
+}
+.rotate__content:hover .rotate__object{
+animation-play-state: paused;
+}
